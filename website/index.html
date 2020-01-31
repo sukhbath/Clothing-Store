@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top">
+        <nav>
+            <div class="left">
+                <a href="http://">Home</a>
+                <a href="http://">About</a>
+                <a href="http://">Product</a>
+                <a href="admin.html" target="_blank">Admin</a>
+            </div>
+            <div class="right">
+                <div class="wishlink"><i class="fas fa-heart"></i>
+                    <div class="wishcart">
+                        <div>
+                            <div class="products">
+                                <!-- wish items -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cartlink">
+                    <p>cart</p>
+                    <div class="cart">
+                        <div>
+                            <div class="products">
+                                <!-- cart items -->
+                            </div>
+                        </div>
+                        <div class="checkoutarea">
+                            <p>total: <span>$<span class="total">0</span></span> </p><button
+                                class="checkout">checkout</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="user"><i class="fas fa-user-circle"></i>
+                    <p class="username">Login</p>
+                    <div class="user-dropdown">
+                        <div>
+                            <div class="logout">Logout</div>
+                            <div class="createaccount">Switch account</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="front-add">
+            <h3>Get More Discounts</h3>
+            <h1>Every Purchase</h1>
+            <h1>Discounts</h1>
+            <p>Discoevr everything you want here because you have lots of things to consider as your whole part of
+                enjoymment</p>
+            <a class="button" href="#">Get saled items</a>
+        </div>
+    </div>
+    <!-- top done -->
+
+
+
+    <!-- allproducts -->
+    <div class="stock">
+        <header>
+            <h2>Products</h2>
+        </header>
+        <div class="products">
+            <!-- products -->
+        </div>
+    </div>
+    <!-- allproducts done -->
+
+
+
+    <!-- login/register forms -->
+    <div class="wrap">
+        <i class="closeforms far fa-times-circle"></i>
+        <div class="formsandside">
+            <div class="forms">
+                <!-- login form -->
+                <div class="loginform">
+                    <div>
+                        <div class="email">
+                            <p class="label">email</p>
+                            <div class="input">
+                                <i class="far fa-envelope"></i>
+                                <input type="email" name="" id="loginemail">
+                            </div>
+                        </div>
+                        <div class="password">
+                            <p class="label">password</p>
+                            <div class="input">
+                                <i class="fas fa-key"></i>
+                                <input type="password" name="" id="loginpassword">
+                            </div>
+                        </div>
+                        <button id="loginbutton">Login</button>
+                    </div>
+                    <div class="loginmessagebar">Successfully created account</div>
+                </div>
+
+                <!-- register form -->
+                <div class="registerform">
+                    <div class=".form">
+                        <div class="name">
+                            <p class="label">fullname</p>
+                            <div class="input">
+                                <i class="far fa-user"></i>
+                                <input type="text" name="" id="registername">
+                            </div>
+                        </div>
+                        <div class="email">
+                            <p class="label">email</p>
+                            <div class="input">
+                                <i class="far fa-envelope"></i>
+                                <input type="email" name="" id="registeremail">
+                            </div>
+                        </div>
+                        <div class="password">
+                            <p class="label">password</p>
+                            <div class="input">
+                                <i class="fas fa-key"></i>
+                                <input type="password" name="" id="registerpassword">
+                            </div>
+                        </div>
+                        <div class="confirmpassword">
+                            <p class="label">confirm password</p>
+                            <div class="input">
+                                <i class="far fa-check-circle"></i>
+                                <input type="password" name="" id="registerconfirmpassword">
+                            </div>
+                        </div>
+                    </div>
+                    <button id="registerbutton">Register</button>
+                    <div class="registermessagebar"></div>
+                </div>
+            </div>
+            <!-- forms done-->
+
+
+            <div class="side">
+                <di class="updown">
+                    <div class="arrow"><i class="fas fa-arrow-up"></i></div>
+                    <div class="switchto">Register</div>
+                </di>
+                <div class="add">
+                    <h2>welcome</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="admin.js"></script>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <a href="index.html">Home</a>
+            <a href="http://">About</a>
+            <a href="http://">Product</a>
+            <a href="http://">Contact</a>
+        </div>
+        <div class="right">
+            <div class="user"><i class="fas fa-user-circle"></i>
+                <p class="username">Admin</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="allproducts">
+        <div id="buttons"><button class="productbutton afterbutton">Products</button>
+            <button class="userbutton ">Users</button></div>
+            <div class="products"></div>
+            <div class="users"></div>
+    </div>
+
+    <div class="productchangeform">
+        <i class="closeforms far fa-times-circle"></i>
+        <div class="form">
+            <div class="name">
+                <p class="label">name</p>
+                <div class="input">
+                    <i class="fas fa-file-signature"></i>
+                    <input type="text" name="" id="changename">
+                </div>
+            </div>
+            <div class="gender">
+                <p class="label">category</p>
+                <div class="input">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <input type="text" name="" id="changegender">
+                </div>
+            </div>
+            <div class="price">
+                <p class="label">price</p>
+                <div class="input">
+                    <i class="fas fa-dollar-sign"></i>
+                    <input type="email" name="" id="changeprice">
+                </div>
+            </div>
+            <button class="changeproductdata">Change</button>
+            <div class="messagebar">Successfully created account</div>
+        </div>
+    </div>
+
+    <div class="userchangeform">
+        <i class="closeforms far fa-times-circle"></i>
+        <div class="form">
+            <div class="name">
+                <p class="label">name</p>
+                <div class="input">
+                    <i class="fas fa-file-signature"></i>
+                    <input type="text" name="" id="changeuname">
+                </div>
+            </div>
+            
+            <div class="password">
+                <p class="label">Password</p>
+                <div class="input">
+                    <i class="fas fa-key"></i>
+                    <input type="text" name="" id="changeupassword">
+                </div>
+            </div>
+            <button class="changeproductdata">Change</button>
+            <div class="messagebar">Successfully created account</div>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
