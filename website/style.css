@@ -1,79 +1,72 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 
 /* @import url('https://fonts.googleapis.com/css?family=Roboto:300&display=swap'); */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* text-transform: capitalize; */
-
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* text-transform: capitalize; */
 }
 
 /* shake animation */
 @keyframes shake {
-    0% {
-        transform: translate(0);
-    }
+  0% {
+    transform: translate(0);
+  }
 
-    20% {
-        transform: translate(3em);
-    }
+  20% {
+    transform: translate(3em);
+  }
 
-    40% {
-        transform: translate(-3em);
-    }
+  40% {
+    transform: translate(-3em);
+  }
 
-    60% {
-        transform: translate(1em);
-    }
+  60% {
+    transform: translate(1em);
+  }
 
-    80% {
-        transform: translate(-1em);
-    }
+  80% {
+    transform: translate(-1em);
+  }
 
-    100% {
-        transform: translate(0);
-    }
+  100% {
+    transform: translate(0);
+  }
 }
 
 .shakeit {
-    animation: shake 0.5s;
-    animation-duration: .4s
+  animation: shake 0.5s;
+  animation-duration: 0.4s;
 }
-
 
 /* loader */
 @-webkit-keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+  }
 
-    0%,
-    80%,
-    100% {
-        -webkit-transform: scale(0)
-    }
-
-    40% {
-        -webkit-transform: scale(1.0)
-    }
+  40% {
+    -webkit-transform: scale(1);
+  }
 }
 
 @keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
 
-    0%,
-    80%,
-    100% {
-        -webkit-transform: scale(0);
-        transform: scale(0);
-    }
-
-    40% {
-        -webkit-transform: scale(1.0);
-        transform: scale(1.0);
-    }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
 }
-
-
 
 .loader,
 .loader:before,
@@ -102,7 +95,7 @@
 .loader:after {
   position: absolute;
   top: 0;
-  content: '';
+  content: "";
 }
 .loader:before {
   left: -1.5em;
@@ -137,769 +130,717 @@
   }
 }
 
-
-
 /* animations done */
 body {
-    font-family: 'Muli', sans-serif;
-
+  font-family: "Muli", sans-serif;
 }
 
 .top {
-    background-color: #3633e9;
-    height: 90vh;
-    position: relative;
-
+  background-color: #3633e9;
+  height: 90vh;
+  position: relative;
 }
-
 
 .top nav {
-    display: block;
-    padding: 10px 40px;
-    text-transform: capitalize;
-    display: flex;
-    justify-content: space-between;
+  display: block;
+  padding: 10px 40px;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 /*all buttons in navigation bar*/
 nav .left a,
-nav .right>div {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    display: inline-block;
-    margin: 1rem 2rem;
-    position: relative;
-    cursor: pointer;
+nav .right > div {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  margin: 1rem 2rem;
+  position: relative;
+  cursor: pointer;
 }
 
 nav .left a::after {
-    content: '';
-    background-color: white;
-    position: absolute;
-    left: 0;
-    bottom: -20%;
-    width: 100%;
-    height: 0px;
-    transition: height .4s;
+  content: "";
+  background-color: white;
+  position: absolute;
+  left: 0;
+  bottom: -20%;
+  width: 100%;
+  height: 0px;
+  transition: height 0.4s;
 }
 
 nav .left a:hover::after {
-    height: 3px;
+  height: 3px;
 }
 
-
-nav .right>div {
-    /* background-color: rgb(110, 151, 240); */
-    background-color: rgba(48, 110, 245, 0.438);
-    /* background-color: rgb(0, 81, 255); */
-    box-shadow: 3px 3px 13px rgba(0, 38, 119, 0.199);
-    padding: 5px 20px;
-    border-radius: 50px;
-    transition: .4s background;
+nav .right > div {
+  /* background-color: rgb(110, 151, 240); */
+  background-color: rgba(48, 110, 245, 0.438);
+  /* background-color: rgb(0, 81, 255); */
+  box-shadow: 3px 3px 13px rgba(0, 38, 119, 0.199);
+  padding: 5px 20px;
+  border-radius: 50px;
+  transition: 0.4s background;
 }
 
-nav .right>div:hover {
-    background-color: rgb(54, 118, 255);
+nav .right > div:hover {
+  background-color: rgb(54, 118, 255);
 }
 
 /* wish cart, cart , user */
-nav .wishlink .wishcart>div,
-nav .cartlink .cart>div:first-of-type {
-    background-color: rgb(240, 240, 240);
-    border-radius: 5px;
-    padding: 10px;
-    overflow-y: scroll;
-    height: 100%;
+nav .wishlink .wishcart > div,
+nav .cartlink .cart > div:first-of-type {
+  background-color: rgb(240, 240, 240);
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: scroll;
+  height: 100%;
 }
-nav .cartlink .cart>div:first-of-type {
-    border-radius: 5px 5px 0 0;
+nav .cartlink .cart > div:first-of-type {
+  border-radius: 5px 5px 0 0;
 }
 
 nav .right .wishlink .wishcart::before,
 nav .cart::before,
 .user-dropdown::before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    border-color: transparent transparent rgb(240, 240, 240)transparent;
-    border-width: 12px 12px 12px 12px;
-    border-style: solid;
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-color: transparent transparent rgb(240, 240, 240) transparent;
+  border-width: 12px 12px 12px 12px;
+  border-style: solid;
 }
 
 nav .right .wishlink .wishcart,
 nav .cart,
 nav .user .user-dropdown {
-    position: absolute;
-    cursor: initial;
-    top: 150%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 40vw;
-    height: 50vh;
-    display: none;
+  position: absolute;
+  cursor: initial;
+  top: 150%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 40vw;
+  height: 50vh;
+  display: none;
 }
-
 
 .wishlink .wishcart .product .addtocartbutton:hover,
 .wishlink .wishcart .product .removefromwishcart:hover,
 .cartlink .cart .product .removefromcart:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 nav .right .wishlink .wishcart .product .removefromwishcart:hover {
-    background: rgba(216, 216, 216, 0.3);
+  background: rgba(216, 216, 216, 0.3);
 }
 
- .wishcart .product>div,
- .wishcart .product>i,
- .cart .product>div,
- .cart .product>i {
-    align-self: center;
+.wishcart .product > div,
+.wishcart .product > i,
+.cart .product > div,
+.cart .product > i {
+  align-self: center;
 }
-
-
 
 .wishcart .product,
 .cart .product {
-    color: black;
-    padding: 10px;
-    border-bottom: 1px solid rgb(177, 177, 177);
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
+  color: black;
+  padding: 10px;
+  border-bottom: 1px solid rgb(177, 177, 177);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .wishcart .product img,
 .cartlink .cart .product img {
-    height: 50px;
+  height: 50px;
 }
 
 .cart .product .name,
 .wishcart .product .name {
-    width: 8rem;
-    text-align: center;
+  width: 8rem;
+  text-align: center;
 }
 
 .cart .product .pricedetail,
 .wishcart .product .pricedetail {
-    width: 4rem;
+  width: 4rem;
 }
 
 .wishlink .wishcart .product .addtocartbutton,
 .wishlink .wishcart .product .removefromwishcart,
 .cartlink .cart .product .removefromcart {
-    padding: 8px;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: transform .2s;
+  padding: 8px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .wishlink .wishcart .product .removefromwishcart {
-    color: rgb(255, 0, 55);
-    background: rgba(190, 190, 190, 0.3);
+  color: rgb(255, 0, 55);
+  background: rgba(190, 190, 190, 0.3);
 }
-
-
-
-
 
 /* user */
 nav .user .user-dropdown {
-    position: absolute;
-    display: none;
-    color: black;
-    width: 15vw;
-    text-align: center;
+  position: absolute;
+  display: none;
+  color: black;
+  width: 15vw;
+  text-align: center;
 }
 
- .user .user-dropdown>div {
-    overflow: hidden;
-    border-radius: 5px;
-    background-color: rgb(240, 240, 240);
+.user .user-dropdown > div {
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
 }
 
- .user .user-dropdown>div>div {
-    padding: 10px;
-    overflow: hidden;
-    cursor: pointer;
+.user .user-dropdown > div > div {
+  padding: 10px;
+  overflow: hidden;
+  cursor: pointer;
 }
 
- .user .user-dropdown>div>div:hover {
-    background-color: rgb(224, 224, 224);
+.user .user-dropdown > div > div:hover {
+  background-color: rgb(224, 224, 224);
 }
-
 
 .user .username {
-    display: inline-block;
-    padding-left: 10px;
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .user .fa-user-circle {
-    font-size: 1.3rem;
-    vertical-align: -2.5px;
+  font-size: 1.3rem;
+  vertical-align: -2.5px;
 }
 /* user done */
 
-
 /* cart */
-  .cart .checkoutarea {
-    display: flex;
-    text-transform: capitalize;
-    background: rgb(255, 188, 17);
-    justify-content: space-between;
-    /* font-family: 'Roboto', sans-serif; */
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
+.cart .checkoutarea {
+  display: flex;
+  text-transform: capitalize;
+  background: rgb(255, 188, 17);
+  justify-content: space-between;
+  /* font-family: 'Roboto', sans-serif; */
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
 }
 
 .cartlink .cart .checkoutarea p {
-    color: white;
-    align-self: center;
+  color: white;
+  align-self: center;
 }
-.cartlink .cart .checkoutarea p >span {
-    color: red;
-    font-size: 1.3rem;
-    align-self: center;
-    background: white;
-    display: inline-block;
-    padding: 5px 20px;
-    border-radius: 50px;
-    
+.cartlink .cart .checkoutarea p > span {
+  color: red;
+  font-size: 1.3rem;
+  align-self: center;
+  background: white;
+  display: inline-block;
+  padding: 5px 20px;
+  border-radius: 50px;
 }
 
 .cart .checkoutarea button {
-    background-color: red;
-    text-transform: capitalize;
-    color: white;
-    /* font-family: 'Roboto', sans-serif; */
-    font-size: 1.2rem;
-    padding: 5px 20px;
-    outline: none;
-    border: none;
-    align-self: center;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: .3s color;
+  background-color: red;
+  text-transform: capitalize;
+  color: white;
+  /* font-family: 'Roboto', sans-serif; */
+  font-size: 1.2rem;
+  padding: 5px 20px;
+  outline: none;
+  border: none;
+  align-self: center;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s color;
 }
 
 .cart .checkoutarea button:hover {
-    background-color: rgb(255, 59, 59);
-
+  background-color: rgb(255, 59, 59);
 }
 
 /* cart done */
 
-
 /* foront-add */
 .top .front-add {
-    width: 40vw;
-    /* font-family: 'Muli', sans-serif; */
-    margin-top: 15vh;
-    margin-left: 10vw;
+  width: 40vw;
+  /* font-family: 'Muli', sans-serif; */
+  margin-top: 15vh;
+  margin-left: 10vw;
 }
 
 .top .front-add h1 {
-    color: rgb(255, 188, 17);
-    font-size: 2.5rem;
-    font-weight: bolder;
+  color: rgb(255, 188, 17);
+  font-size: 2.5rem;
+  font-weight: bolder;
 }
 
 .top .front-add h3 {
-    color: white;
-    font-size: 1.3rem;
+  color: white;
+  font-size: 1.3rem;
 }
 
 .top .front-add p {
-    color: rgb(194, 194, 194);
-    margin-top: .5rem;
-    font-weight: bold;
-
-
+  color: rgb(194, 194, 194);
+  margin-top: 0.5rem;
+  font-weight: bold;
 }
 
 .top .front-add button {
-    margin-top: 2rem;
+  margin-top: 2rem;
 }
 
 .top .front-add .button {
-    background-color: rgb(233, 0, 0);
-    text-decoration: none;
-    font-weight: bold;
-    border: none;
-    font-size: 1.3rem;
-    padding: 5px 30px;
-    display: inline-block;
-    border-radius: 50px;
-    color: white;
-    margin: 1.6rem 0 0 0;
-    box-shadow: 0px 3px 15px rgba(233, 0, 0, .6);
-    transition: .4s box-shadow;
+  background-color: rgb(233, 0, 0);
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  font-size: 1.3rem;
+  padding: 5px 30px;
+  display: inline-block;
+  border-radius: 50px;
+  color: white;
+  margin: 1.6rem 0 0 0;
+  box-shadow: 0px 3px 15px rgba(233, 0, 0, 0.6);
+  transition: 0.4s box-shadow;
 }
 
 .top .front-add .button:hover {
-    box-shadow: 0px 0px 5px rgb(233, 0, 0);
+  box-shadow: 0px 0px 5px rgb(233, 0, 0);
 }
-
-
 
 /* stock */
 .stock header {
-    color: red;
-    text-align: center;
-    position: relative;
+  color: red;
+  text-align: center;
+  position: relative;
 }
 
 .stock header h2 {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
 }
 
 .stock header h2::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    height: 4px;
-    background: rgb(28, 28, 228);
-    left: 0;
-    width: 100%;
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 4px;
+  background: rgb(28, 28, 228);
+  left: 0;
+  width: 100%;
 }
 
 .stock .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 85vw;
-    margin: 10px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 85vw;
+  margin: 10px auto 0;
 }
 
 .stock .product {
-    margin-top: 25px;
-    position: relative;
-    width: 25vw;
-    box-shadow: 2px 3px 8px rgba(128, 128, 128, .5);
-    overflow: hidden;
-    transition: box-shadow .6s;
-
+  margin-top: 25px;
+  position: relative;
+  width: 25vw;
+  box-shadow: 2px 3px 8px rgba(128, 128, 128, 0.5);
+  overflow: hidden;
+  transition: box-shadow 0.6s;
 }
 
 .stock .product:hover {
-    box-shadow: 2px 3px 5px rgba(128, 128, 128, .5);
+  box-shadow: 2px 3px 5px rgba(128, 128, 128, 0.5);
 }
 
 .stock .product .addtowishcartbutton {
-    background: rgba(121, 121, 121, 0.3);
-    color: white;
-    padding: 8px;
-    border-radius: 50px;
-    font-size: 1.5rem;
-    position: absolute;
-    right: -12%;
-    top: -12%;
-    cursor: pointer;
-    transition: top .8s, color .4s, right .8s;
+  background: rgba(121, 121, 121, 0.3);
+  color: white;
+  padding: 8px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  position: absolute;
+  right: -12%;
+  top: -12%;
+  cursor: pointer;
+  transition: top 0.8s, color 0.4s, right 0.8s;
 }
 
 .stock .product:hover .addtowishcartbutton {
-    right: 6%;
-    top: 6%;
-    cursor: pointer;
+  right: 6%;
+  top: 6%;
+  cursor: pointer;
 }
 
 .stock .product .addtowishcartbutton:hover {
-    background: rgba(121, 121, 121, 0.3);
-    color: rgb(255, 0, 55);
-    padding: 8px;
-    font-size: 1.5rem;
+  background: rgba(121, 121, 121, 0.3);
+  color: rgb(255, 0, 55);
+  padding: 8px;
+  font-size: 1.5rem;
 }
 
 .stock .product img {
-    height: 200px;
-    display: block;
-    margin: auto;
-    cursor: pointer;
-
+  height: 200px;
+  display: block;
+  margin: auto;
+  cursor: pointer;
 }
 
 .stock .product .discription {
-    padding: 10px;
-    text-transform: capitalize;
+  padding: 10px;
+  text-transform: capitalize;
 }
 
 .stock .product .discription .category {
-    color: rgb(43, 43, 43);
-    font-size: .9rem;
+  color: rgb(43, 43, 43);
+  font-size: 0.9rem;
 }
 
 .stock .product .discription .name {
-    text-transform: capitalize;
-    font-weight: bold;
+  text-transform: capitalize;
+  font-weight: bold;
 }
 
 .stock .product .ratingandprice {
-    display: flex;
-    justify-content: space-between;
-    /* background: green; */
+  display: flex;
+  justify-content: space-between;
+  /* background: green; */
 }
 
 .stock .product .ratingandprice .ratingdetail {
-    background: rgb(231, 228, 11);
-    width: 20%;
-    border-radius: 50px;
-    text-align: center;
-    color: white;
-    font-weight: bold;
-    align-self: center;
+  background: rgb(231, 228, 11);
+  width: 20%;
+  border-radius: 50px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  align-self: center;
 }
 
 .stock .product .ratingandprice .ratingdetail .fa-star {
-    margin-left: 5px;
+  margin-left: 5px;
 }
 
 .stock .product .discription .ratingandprice .pricedetail {
-    font-size: 1.6rem;
-    font-weight: bold;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .stock .product .discription .addtocart {
-    border-top: gray 1px solid;
-    text-align: center;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 3px 5px;
-    font-weight: bold;
-    color: rgb(104, 104, 104);
-    transition: .4s color;
+  border-top: gray 1px solid;
+  text-align: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 3px 5px;
+  font-weight: bold;
+  color: rgb(104, 104, 104);
+  transition: 0.4s color;
 }
 
 .stock .product .discription .addtocart:hover {
-    color: black;
+  color: black;
 }
-
 
 /* login/register forms */
 .wrap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background: rgba(0, 0, 0, .7);
-    display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
 }
 
 .wrap-show {
-    display: block;
+  display: block;
 }
 
 .wrap .closeforms {
-    position: absolute;
-    top: -.4;
-    right: 1.2%;
-    width: 3rem;
-    text-align: center;
-    line-height: 3rem;
-    height: 3rem;
-    color: rgb(206, 206, 206);
-    cursor: pointer;
-    font-size: 2.3rem;
-    transition: .3s color;
+  position: absolute;
+  top: -0.4;
+  right: 1.2%;
+  width: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  height: 3rem;
+  color: rgb(206, 206, 206);
+  cursor: pointer;
+  font-size: 2.3rem;
+  transition: 0.3s color;
 }
 
 .wrap .closeforms:hover {
-    color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
 }
 
-
 .wrap .formsandside {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 90vh;
-    width: 80vw;
-    overflow: hidden;
-    display: flex;
-    border-radius: 5px;
-    overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  width: 80vw;
+  overflow: hidden;
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
 }
 
 .wrap .formsandside .forms,
 .wrap .formsandside .side {
-    width: 50%;
-    background: white;
-    display: flex;
-    background: rgb(248, 248, 248);
-    background: #eee;
+  width: 50%;
+  background: white;
+  display: flex;
+  background: rgb(248, 248, 248);
+  background: #eee;
 }
 .forms {
-    position: relative;
+  position: relative;
 }
 
 .forms .registerform {
-    width: 100%;
-    margin: auto;
-    background: #eee;
-
+  width: 100%;
+  margin: auto;
+  background: #eee;
 }
 
-.forms .registerform>div:not(.registermessagebar) {
-    width: 60%;
-    text-transform: capitalize;
-    margin: auto;
-    font-weight: bold;
-    color: #666;
+.forms .registerform > div:not(.registermessagebar) {
+  width: 60%;
+  text-transform: capitalize;
+  margin: auto;
+  font-weight: bold;
+  color: #666;
 }
-
-
-
 
 .loginform {
-    position: absolute;
-    z-index: 99;
-    /* top: -100%; */
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    transition: .6s top;
-    background: #eee;
-    overflow: hidden;
+  position: absolute;
+  z-index: 99;
+  /* top: -100%; */
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: 0.6s top;
+  background: #eee;
+  overflow: hidden;
 }
-
 
 .loginform-hide {
-    top: -100%;
+  top: -100%;
 }
-
-
 
 .registerform .input,
 .loginform .input {
-    border: 2px solid #ddd;
-    padding: 5px 10px;
-    background: #fff;
-    color: #666;
-    border-radius: 5px;
-    font-size: 1.3rem;
-    margin: 0px 0 20px;
-
+  border: 2px solid #ddd;
+  padding: 5px 10px;
+  background: #fff;
+  color: #666;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  margin: 0px 0 20px;
 }
 
- .forms .registerform>div>div p,
-.forms .loginform>div>div p {
-    color: rgb(48, 48, 48);
-    font-size: .9rem;
+.forms .registerform > div > div p,
+.forms .loginform > div > div p {
+  color: rgb(48, 48, 48);
+  font-size: 0.9rem;
 }
 
- .forms .registerform input,
- .forms .loginform input {
-    background: none;
-    border: none;
-    outline: none;
-    font-size: 1.1rem;
-
+.forms .registerform input,
+.forms .loginform input {
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
 }
-
 
 .registerform button,
 .loginform button {
-    background: rgb(255, 47, 47);
-    color: white;
-    font-size: 1.4rem;
-    padding: 5px 55px;
-    border: none;
-    outline: none;
-    border-radius: 50px;
-    display: block;
-    margin: 2rem auto;
-    cursor: pointer;
-    transition: .3s transform;
-    position: relative;
+  background: rgb(255, 47, 47);
+  color: white;
+  font-size: 1.4rem;
+  padding: 5px 55px;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  display: block;
+  margin: 2rem auto;
+  cursor: pointer;
+  transition: 0.3s transform;
+  position: relative;
 }
 
 .registerform button:hover,
 .loginform button:hover {
-    transform: scale(1.04);
+  transform: scale(1.04);
 }
 
-
-
-.loginform>div {
-    width: 60%;
-    text-transform: capitalize;
-    margin: auto;
-    font-weight: bold;
+.loginform > div {
+  width: 60%;
+  text-transform: capitalize;
+  margin: auto;
+  font-weight: bold;
 }
-
 
 .wrap .formsandside .side {
-    position: relative;
-    background-image: radial-gradient(circle, #2746f7, #0026ff);
-    display: flex;
+  position: relative;
+  background-image: radial-gradient(circle, #2746f7, #0026ff);
+  display: flex;
 }
 
 .wrap .formsandside .side .add {
-    margin: auto;
+  margin: auto;
 }
 
 .wrap .formsandside .side .add h2:first-of-type,
 .wrap .formsandside .side .add h2:last-of-type {
-    color: white;
+  color: white;
 }
 
 .wrap .updown {
-    position: absolute;
-    left: 5%;
-    bottom: 85%;
-    /* bottom: 15%; */
-    text-align: center;
-    transition: bottom .6s ease-in-out;
+  position: absolute;
+  left: 5%;
+  bottom: 85%;
+  /* bottom: 15%; */
+  text-align: center;
+  transition: bottom 0.6s ease-in-out;
 }
 
 .wrap .updownchanged {
-    /* bottom: 85%; */
-    bottom: 15%;
+  /* bottom: 85%; */
+  bottom: 15%;
 }
 
 .wrap .updown .arrow {
-    cursor: pointer;
-    transform: translate(0, 200%);
-    transition: transform .4s;
+  cursor: pointer;
+  transform: translate(0, 200%);
+  transition: transform 0.4s;
 }
 
 .wrap .updown .arrownew {
-    transform: translate(0, 00%);
-
+  transform: translate(0, 00%);
 }
 
 .wrap .updown .fa-arrow-up {
-    background: rgb(241, 241, 241);
-    border-radius: 50px;
-    height: 3rem;
-    width: 3rem;
-    line-height: 3rem;
-    color: #3554ff;
-    font-size: 2.3rem;
-    transform: rotateX(180deg);
-    transition: .4s transform;
+  background: rgb(241, 241, 241);
+  border-radius: 50px;
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+  color: #3554ff;
+  font-size: 2.3rem;
+  transform: rotateX(180deg);
+  transition: 0.4s transform;
 }
 
 .wrap .updown .fa-arrow-upnew {
-    transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
 
 .wrap .updown .switchto {
-    font-size: 1.3rem;
-    color: rgb(240, 240, 240);
-    font-weight: bold;
-    background: rgb(6, 6, 228);
-    margin: 5px;
-    border-radius: 50px;
-    padding: 2px 20px;
-    width: 10rem;
-    text-align: center;
-    text-transform: capitalize;
+  font-size: 1.3rem;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  background: rgb(6, 6, 228);
+  margin: 5px;
+  border-radius: 50px;
+  padding: 2px 20px;
+  width: 10rem;
+  text-align: center;
+  text-transform: capitalize;
 }
 
 .wrap .updown .switchto:hover {
-    background: rgb(2, 2, 241);
-
+  background: rgb(2, 2, 241);
 }
 
 /*invalid input */
 
-.wrap .forms>.registerform>div>div {
-    position: relative;
+.wrap .forms > .registerform > div > div {
+  position: relative;
 }
-
-
-
-
 
 .spinner {
-    margin: auto;
-    width: 70px;
-    display: flex;
-    justify-content: space-around;
+  margin: auto;
+  width: 70px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.spinner>div {
-    width: 12px;
-    height: 12px;
-    align-self: center;
-    /* background-color: #333; */
-    background-color: white;
-    border-radius: 100%;
-    display: inline-block;
-    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
-    animation: sk-bouncedelay 1.6s infinite ease-in-out both;
+.spinner > div {
+  width: 12px;
+  height: 12px;
+  align-self: center;
+  /* background-color: #333; */
+  background-color: white;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.6s infinite ease-in-out both;
 }
 
 .spinner .bounce1 {
-    -webkit-animation-delay: -0.32s;
-    animation-delay: -0.32s;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
 }
 
 .spinner .bounce2 {
-    -webkit-animation-delay: -0.16s;
-    animation-delay: -0.16s;
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
 }
-
-
 
 /*  for elements added dyanmicaly*/
 
-
-.emptycart{
-    width: 200px;
-    overflow: hidden;
-    text-align: center;
-    /* border: 1px solid red; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    color: black;
-    margin: auto;
+.emptycart {
+  width: 200px;
+  overflow: hidden;
+  text-align: center;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  margin: auto;
 }
-.emptycart img{
-    width: 50px;
-    margin: auto;
-    display: block;
+.emptycart img {
+  width: 50px;
+  margin: auto;
+  display: block;
 }
-
-
 
 .registerform .registermessagebar,
 .loginform .loginmessagebar {
-    /* background: rgb(255, 188, 17); */
-    /* background: rgb(14, 173, 115); */
-    background: red;
-    position: absolute;
-    bottom: -20%;
-    /* bottom: 0; */
-    height: 10vh;
-    text-align: center;
-    border-radius: 5px 5px 0 0;
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    transition: .3s bottom;
+  /* background: rgb(255, 188, 17); */
+  /* background: rgb(14, 173, 115); */
+  background: red;
+  position: absolute;
+  bottom: -20%;
+  /* bottom: 0; */
+  height: 10vh;
+  text-align: center;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  transition: 0.3s bottom;
 }
-
-
 
 .registerform .registermessagebar-show,
-.loginform .loginmessagebar-show{
-    bottom: 0%;
+.loginform .loginmessagebar-show {
+  bottom: 0%;
 }
+
 
