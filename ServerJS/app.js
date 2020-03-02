@@ -5,22 +5,6 @@ var MongoClient = require('mongodb').MongoClient;
 var url = "mongodb+srv://sukh:sukh@cluster0-7nszg.mongodb.net/test?retryWrites=true&w=majority";
 const app = express();
 const port = 3000;
-// var con = mySql.createConnection({
-//     host: "127.0.0.1",
-//     port: "3306",
-//     user: "myDBuser",
-//     password: "123",
-//     database: "mydatabase"
-// });
-// con.connect(function (err,res) {
-//     if (err) {
-//         console.log("Error Connection DB");
-//         res.status(500).send('Something broke!')
-//         console.log(err);
-//     } else {
-//         console.log("Connection With DB Sucess");
-//     }
-// });
 
 
 
@@ -139,62 +123,7 @@ app.get('/logout', function (req, res) {
     res.send('logged out')
 })
 
-app.put('/addtocarrt', function (req, res) {
-    var data = req.body;
-    console.log(data);
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        var dbo = db.db("project");
-        dbo.collection("users").findOne({ "currentuser": true }, function (err, user) {
-            if (err) throw err;
 
-            //to check if any one is logged in or not
-            if (user != null) {
-                var found = false;
-
-                //to check if the item is already in cart
-                for (const val of user.cart) {
-                    if ((val.name == data.name) && (val.image == data.image) && (val.price == data.price)) {
-                        console.log(val.name);
-                        console.log(data.name);
-                        found = true;
-                        break;
-                    }
-                }
-                if (found) {
-                    res.send(false)
-                } else {
-                    dbo.collection("users").updateOne({ "currentuser": true }, { $push: { cart: data } }, function (err, ress) {
-                        if (err) throw err;
-                        res.send(true)
-                        console.log(true);
-                        db.close();
-                    });
-                }
-            } else {
-                res.send('loginplease')
-            }
-        });
-    })
-});
-
-
-
-app.delete('/removefromcarrt', function (req, res) {
-    var data = req.body;
-    MongoClient.connect(url, function (err, db) {
-        if (err) throw err;
-        console.log('removing');
-        console.log(data);
-        var dbo = db.db("project");
-        dbo.collection("users").updateMany({ "currentuser": true }, { $pull: { cart: data } }, function (err, res) {
-            if (err) throw err;
-            console.log('removed');
-            db.close();
-        });
-    });
-    res.send(true)
-})
 
 
 
@@ -450,30 +379,11 @@ app.post('/adminuchange', function (req, res) {
 
 
 
-app.put('/stockS', function (req, res) {
-    console.log('done');
-    
-})
 
 
 
 
 
 
-
-
-
-
-
-
-
-//Respond to a PUT request to the /user route:
-app.put('/user', function (req, res) {
-    res.send('Got a PUT request at /user')
-})
-// Respond to a DELETE request to the /user route:
-app.delete('/user', function (req, res) {
-    res.send('Got a DELETE request at /user')
-})
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

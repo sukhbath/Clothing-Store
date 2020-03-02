@@ -137,8 +137,9 @@ body {
 
 .top {
   background-color: #3633e9;
-  height: 90vh;
+  height: 100vh;
   position: relative;
+  /* background: yellow; */
 }
 
 .top nav {
@@ -371,10 +372,12 @@ nav .user .user-dropdown {
 
 /* foront-add */
 .top .front-add {
-  width: 40vw;
+  width: 50vw;
   /* font-family: 'Muli', sans-serif; */
   margin-top: 15vh;
   margin-left: 10vw;
+  height: 100vh;
+  text-align: left;
 }
 
 .top .front-add h1 {
@@ -843,3 +846,108 @@ nav .user .user-dropdown {
   bottom: 0%;
 }
 
+.loginpls {
+  color: black;
+  text-align: center;
+  /* padding-top: 2rem; */
+  
+}
+.loginpls img {
+  height:  40%;
+  width: 40%;
+  object-fit: contain;
+}
+
+@media (max-width: 600px) {
+  body {
+    /* background: red; */
+  }
+  .top {
+    height: auto;
+  }
+  .top nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+  nav .left,
+  nav .right {
+    width: 100%;
+    /* flex-direction: row; */
+  }
+
+  .left a,
+  .right > div {
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+
+  nav .right .wishlink .wishcart,
+  nav .cart,
+  nav .user .user-dropdown {
+    position: absolute;
+    cursor: initial;
+    top: 150%;
+    left: 50%;
+    /* transform: translate(-50%, 0); */
+    width: 80vw;
+    height: 80vh;
+    display: none;
+    z-index: 11;
+  }
+
+  .top .front-add {
+    /* background: yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+    text-align: center;
+  }
+
+  .stock {
+    /* background: yellow; */
+  }
+  .stock .products {
+    width: 100%;
+    display: block;
+  }
+  .stock .product {
+    width: 80%;
+    margin: 1rem auto;
+  }
+
+  .wrap .formsandside {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 90vh;
+    width: 100vw;
+    display: block;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+.wrap .formsandside .forms,
+.wrap .formsandside .side {
+  width: 100%;
+  background: white;
+  display: flex;
+  background: rgb(248, 248, 248);
+  background: #eee;
+}
+.wrap .formsandside .side {
+  width: 100%;
+  text-align: center;
+}
+.wrap .formsandside .side * {
+  position: static;
+}
+
+
+
+}

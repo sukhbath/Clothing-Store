@@ -109,11 +109,7 @@ $(document).ready(function () {
     <div class="bounce2"></div>\
     <div class="bounce3"></div>\
   </div>');
-  $('.stock .products').html(' <div class="loader">Loading...</div>');
-
-
-
-// APIs
+    $('.stock .products').html(' <div class="loader">Loading...</div>');
 
 
 
@@ -186,8 +182,8 @@ $(document).ready(function () {
             }
         } else {
             $('.user .username').html('login');
-            $('.cart .products').html('<img src="loginplease.png">');
-            $('.wishcart .products').html('<img src="loginplease.png">');
+            $('.cart .products').html('<div class="loginpls" ><h2>Login Please</h2><img src="loginplease.png"></div>');
+            $('.wishcart .products').html('<div class="loginpls"><h2>Login Please</h2><img  src="loginplease.png"></div>');
 
         }
     });
@@ -207,8 +203,8 @@ $(document).ready(function () {
             console.log(itemDetail);
             $.put("http://127.0.0.1:3000/addtocart", itemDetail,
                 function (data, textStatus, jqXHR) {
-                    
-                    if (data==true) {
+
+                    if (data == true) {
                         var cart = `<div class="product">
                     <img src="${itemDetail.image}" alt="">
                     <div class="name">${itemDetail.name}</div>
@@ -218,11 +214,11 @@ $(document).ready(function () {
                         $(".cart .products").append(cart);
                         var total = $(".checkoutarea .total").html()
                         $(".checkoutarea .total").html(Number(total) + Number(itemDetail.price))
-                    } 
-                    else if(data==false) {
+                    }
+                    else if (data == false) {
                         alert("item already exist")
                     }
-                    else if(data=='loginplease'){
+                    else if (data == 'loginplease') {
                         alert("login please")
                     }
                 },
@@ -249,8 +245,8 @@ $(document).ready(function () {
             console.log(itemDetail);
             $.post("http://127.0.0.1:3000/addtocart", itemDetail,
                 function (data, textStatus, jqXHR) {
-                    
-                    if (data==true) {
+
+                    if (data == true) {
                         var cart = `<div class="product">
                     <img src="${itemDetail.image}" alt="">
                     <div class="name">${itemDetail.name}</div>
@@ -260,11 +256,11 @@ $(document).ready(function () {
                         $(".cart .products").append(cart);
                         var total = $(".checkoutarea .total").html()
                         $(".checkoutarea .total").html(Number(total) + Number(itemDetail.price))
-                    } 
-                    else if(data==false) {
+                    }
+                    else if (data == false) {
                         alert("item already exist")
                     }
-                    else if(data=='loginplease'){
+                    else if (data == 'loginplease') {
                         alert("login please")
                     }
                 },
@@ -375,7 +371,7 @@ $(document).ready(function () {
     $('.wishcart .products').click(function (e) {
         if (e.target.className == 'addtocartbutton fas fa-cart-plus') {
             ;
-            
+
             var item = $(e.target).parents('.product');
             var itemDetail = {
                 'image': item.find("img").attr("src"),
@@ -384,12 +380,12 @@ $(document).ready(function () {
             }
             $.post("http://127.0.0.1:3000/addtocartfromwish", itemDetail,
                 function (data, textStatus, jqXHR) {
-                  
+
 
                     if (data) {
                         $(item).remove();
-                        var gettotal=$('.total').html();
-                        var total = (gettotal*1);
+                        var gettotal = $('.total').html();
+                        var total = (gettotal * 1);
                         var cart = `<div class="product">
                     <img src="${itemDetail.image}" alt="">
                     <div class="name">${itemDetail.name}</div>
@@ -397,8 +393,8 @@ $(document).ready(function () {
                     <i class="removefromcart fas fa-trash"></i>
                 </div>`;
                         $(".cart .products").append(cart);
-                       
-                        total += (itemDetail.price*1)
+
+                        total += (itemDetail.price * 1)
                         $('.total').html(total)
                     } else {
                         alert("item already exist")
@@ -428,7 +424,7 @@ $(document).ready(function () {
                     })
                     $('.registermessagebar').html('successfuly created account');
                     $('.registermessagebar').addClass('registermessagebar-show');
-                    
+
                 } else {
                     $('.registermessagebar').css({
                         background: 'red'
@@ -459,8 +455,8 @@ $(document).ready(function () {
             console.log(data);
             if (!data) {
                 $(".loginform").addClass("wrongloginform");
-                
-                
+
+
                 $('.loginmessagebar').html("no user matched")
                 $('.loginmessagebar').addClass('loginmessagebar-show');
                 $('.loginform .email .input,.loginform .password .input').css({
@@ -550,6 +546,6 @@ $(document).ready(function () {
     });
 
 
-   
+
 
 });
